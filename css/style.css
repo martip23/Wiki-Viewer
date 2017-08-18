@@ -15,7 +15,7 @@ a:hover {
 }
 
 #background {
-    background-color: black;
+    background-color: rgba(28, 31, 51, 1);
     min-height: 100vh;
     
     display: flex;
@@ -25,44 +25,40 @@ a:hover {
 
 #content-container {
     /* Alignment stuff */
-    
+    padding: 1%;
     /* Background stuff */
-    
+    background-color: rgba(102, 99, 112, 1);
     /* Text stuff */
-    color: white;
+    color: rgba(28, 31, 51, 1);
+    /* Borders */
+    border: solid;
+    border-color: lightgray;
+    
 }
 
 #title {
     text-align: center;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 14vw;
 }
 
-#icon-box {
-    height: 200px;
-    text-align: center;
-    min-height: 100px;
-    background-size: auto;
-    max-height: 100%;
+#search-container {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
 }
 
-#description {
-    padding: 10px;
-    text-align: center;
-    font-size: 5vw;
-    text-shadow: 3px 3px 0px #000;
+#search-box {
+    width: 65%;
 }
 
-#temp {
-    text-align: center;
-    font-size: 5vw;
+#search-button {
+    width: 35%;
 }
 
-#degree-change {
-    text-align: center;
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 4vw;
+#random-button {
+    width: 100%;
 }
 
 #who-link {
@@ -75,33 +71,12 @@ a:hover {
 
 @media screen and (min-width: 480px) {
     
-    #quote-box {
-        max-width: 800px;
-    }
-    
     #title {
-        font-size: 7vw;
-    }
-    
-    #quote {
-        font-size: 3.5vw;
-    }
-    
-    #author {
-        font-size: 4.5vw;
+        font-size: 6vw;
     }
 }
 
 @media screen and (min-width: 1000px) {
     #title {
         font-size: 70px;
-    }
-    
-    #quote {
-        font-size: 30px;
-    }
-    
-    #author {
-        font-size: 40px;
-    }
 }

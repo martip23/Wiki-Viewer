@@ -49,6 +49,4 @@ $(document).ready(function () {
             
         $("#temp").html();
     });
-    
-    getLocation();
 });
