@@ -2,13 +2,6 @@
 /*jslint devel: true */
 /*global $, jQuery*/
 
-/* RGB */
-$color1: rgba(255, 34, 12, 1);
-$color2: rgba(211, 62, 67, 1);
-$color3: rgba(155, 120, 116, 1);
-$color4: rgba(102, 99, 112, 1);
-$color5: rgba(28, 31, 51, 1);
-
 $(document).ready(function () {
     "use strict";
     
