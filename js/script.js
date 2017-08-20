@@ -2,6 +2,8 @@
 /*jslint devel: true */
 /*global $, jQuery*/
 
+/*API URL: /w/api.php?action=query&format=json&prop=info%7Cextracts&generator=search&callback=&inprop=url&exsentences=4&exintro=1&gsrsearch=Bacon&gsrlimit=20 */
+
 $(document).ready(function () {
     "use strict";
     
