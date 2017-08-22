@@ -14,7 +14,11 @@ $(document).ready(function () {
     $("#search-button").on("click", function () {
         var input;
         input = $("#search-box").val();
-        $.getJSON("https://en.wikipedia.org/w/api.php?action=query&format=json&titles=" + input + "&");
-
+        $.ajax({
+            url: "https://en.wikipedia.org/w/api.php?action=query&format=jsonfm&prop=info%7Cextracts" + "&generator=search&callback=&inprop=url&exsentences=4&exintro=1&gsrsearch=" + input + "&gsrlimit=20",
+            success: function (json) {
+                $("#result-box").html(json);
+            }
+        });
     });
 });
