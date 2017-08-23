@@ -14,13 +14,19 @@ $(document).ready(function () {
     $("#search-button").on("click", function () {
         var input, url;
         input = $("#usr-entry").val();
-        url = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info%7Cextracts" + "&generator=search&callback=&inprop=url&exsentences=4&exintro=1&gsrsearch=" + input + "&gsrlimit=20";
+        url = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info%7Cextracts" + "&generator=search&callback=&inprop=url&exsentences=1&exintro=1&gsrsearch=" + input + "&gsrlimit=20";
         $.ajax({
             type: "GET",
             url: url,
             dataType: "jsonp",
             success: function (json) {
-                $("#result-box").html(json);
+                var pages = $.map(json.query.pages, function (value) {
+                    return [value];
+                });
+                
+                pages.forEach(function (page) {
+                    $("#result-box").append(page.title + ' - ' + page.extract + ' - ' + page.fullurl);
+                });
             },
             error: function (exception) {
                 alert('Exeption:' + exception);
