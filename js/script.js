@@ -12,12 +12,18 @@ $(document).ready(function () {
     });
     
     $("#search-button").on("click", function () {
-        var input;
-        input = $("#search-box").val();
+        var input, url;
+        input = $("#usr-entry").val();
+        url = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info%7Cextracts" + "&generator=search&callback=&inprop=url&exsentences=4&exintro=1&gsrsearch=" + input + "&gsrlimit=20";
         $.ajax({
-            url: "https://en.wikipedia.org/w/api.php?action=query&format=jsonfm&prop=info%7Cextracts" + "&generator=search&callback=&inprop=url&exsentences=4&exintro=1&gsrsearch=" + input + "&gsrlimit=20",
+            type: "GET",
+            url: url,
+            dataType: "jsonp",
             success: function (json) {
                 $("#result-box").html(json);
+            },
+            error: function (exception) {
+                alert('Exeption:' + exception);
             }
         });
     });
