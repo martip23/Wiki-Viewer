@@ -23,9 +23,14 @@ $(document).ready(function () {
                 var pages = $.map(json.query.pages, function (value) {
                     return [value];
                 });
-                
+                $("#result-box").empty();
                 pages.forEach(function (page) {
-                    $("#result-box").append(page.title + ' - ' + page.extract + ' - ' + page.fullurl);
+                    $("#result-box").append(
+                        "<article class='search-result'> <a href=" + page.fullurl + " target='_blank'>" +
+                            "<h3>" + page.title + '</h3>' +
+                            "<p>" + page.extract + '</p>' +
+                            "</a></article>"
+                    );
                 });
             },
             error: function (exception) {
