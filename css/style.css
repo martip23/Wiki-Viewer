@@ -1,18 +1,16 @@
-/* RGB */
+/* RGB
 $color1: rgba(255, 34, 12, 1);
 $color2: rgba(211, 62, 67, 1);
 $color3: rgba(155, 120, 116, 1);
 $color4: rgba(102, 99, 112, 1);
 $color5: rgba(28, 31, 51, 1);
+*/
 
-a, a:link, a:visited, a:active {
+a, a:hover, a:link, a:visited, a:active {
     color: white;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
-a:hover {
-    color: bisque;
-}
 
 #background {
     background-color: rgba(28, 31, 51, 1);
@@ -63,7 +61,21 @@ a:hover {
 }
 
 #result-box {
-    color: white;
+    border: solid;
+    background-color: darkgray;
+    color: rgba(28, 31, 51, 1);
+}
+
+#result-box a {
+    color: rgba(28, 31, 51, 1);
+}
+
+.search-result {
+    border-top: 1px;
+    border-bottom: 1px;
+    border-left: 0px;
+    border-right: 0px;
+    border-color: black;
 }
 
 #who-link {
