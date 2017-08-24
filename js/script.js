@@ -27,9 +27,9 @@ $(document).ready(function () {
                 pages.forEach(function (page) {
                     $("#result-box").append(
                         "<article class='search-result'> <a href=" + page.fullurl + " target='_blank'>" +
-                            "<h3>" + page.title + '</h3>' +
+                            "<h3>" + page.title + '</h3></a>' +
                             "<p>" + page.extract + '</p>' +
-                            "</a></article>"
+                            "</article>"
                     );
                 });
             },

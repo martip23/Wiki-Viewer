@@ -1,9 +1,15 @@
-/* RGB */
+/* RGB
 $color1: rgba(255, 34, 12, 1);
 $color2: rgba(211, 62, 67, 1);
 $color3: rgba(155, 120, 116, 1);
 $color4: rgba(102, 99, 112, 1);
 $color5: rgba(28, 31, 51, 1);
+*/
+
+a, a:hover, a:link, a:visited, a:active {
+    color: white;
+    text-decoration: none;
+}
 
 
 #background {
@@ -57,7 +63,11 @@ $color5: rgba(28, 31, 51, 1);
 #result-box {
     border: solid;
     background-color: darkgray;
-    color: white;
+    color: rgba(28, 31, 51, 1);
+}
+
+#result-box a {
+    color: rgba(28, 31, 51, 1);
 }
 
 .search-result {
@@ -74,11 +84,6 @@ $color5: rgba(28, 31, 51, 1);
     font-family: 'EB Garamond', serif;
     text-align: center;
     width: 100%;
-}
-
-a, a:hover, a:link, a:visited, a:active {
-    color: white;
-    text-decoration: none;
 }
 
 @media screen and (min-width: 480px) {
